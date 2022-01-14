@@ -5,7 +5,7 @@ USE employeeMgmt_db;
 
 DROP TABLE IF EXISTS department;
 CREATE TABLE department (
-  dept_id INT AUTO_INCREMENT PRIMARY KEY,
+  id INT AUTO_INCREMENT PRIMARY KEY,
   depName VARCHAR(30)
 );
 
@@ -16,7 +16,7 @@ CREATE TABLE emp_role (
   salary DECIMAL,
   department_id INT,
   FOREIGN KEY (department_id)
-  REFERENCES department(dept_id)
+  REFERENCES department(id)
 );
 
 DROP TABLE IF EXISTS employee;
