@@ -152,7 +152,6 @@ function addRole() {
             startPrompt()
         }
         console.log('Role Successfully added')
-        viewRoles()
         startPrompt()
     })
 }
@@ -173,7 +172,6 @@ function addDept() {
             startPrompt()
         }
         console.log('Department Successfully added')
-        viewDept()
         startPrompt()
     })
 }
@@ -214,7 +212,6 @@ function addEmp() {
             startPrompt()
         }
         console.log('Employee Successfully added')
-        viewEmp()
         startPrompt()
     })
 }
@@ -262,11 +259,12 @@ function updateEmpRole(){
 
         }
     ]).then((answers) => {
-        connection.query(`UPDATE employee SET role_id = "${listofroles.indexOf(answers.emp_role)+1}" WHERE id = "${listofemp.indexOf(answers.emp_name)+1}`),
+        connection.query(`UPDATE employee SET role_id = ${listofroles.indexOf(answers.emp_role)+1} WHERE emp_id = ${listofemp.indexOf(answers.emp_name)+1}`),
         function (err) {
             if (err) 
                 throw err
                 console.log(err);
+        startPrompt()
         }
         console.log('Employee Role Changed Successfully')
         startPrompt()
