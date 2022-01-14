@@ -4,6 +4,7 @@
 This is a CLI based Employee managment system
 
 Live Link: [Employee_Management_System](https://github.com/alifaizan786-op/Employee_Management_System)
+Video: [Tutorial](https://drive.google.com/file/d/1lqWpSElh4wDztR4G9go4tRhoFxK2jY66/view?usp=sharing)
 ---
 ## Table of Contents
 - [Installation](#installation)
